@@ -1,0 +1,49 @@
+<template>
+  <div>
+    <button v-on:click="show = !show">
+      Toggle render
+    </button>
+    <transition name="slide-fade">
+      <p v-if="show">hellp</p>
+    </transition>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'demo2',
+  data () {
+    return {
+      show: true
+    }
+  }
+}
+</script>
+
+<style scoped>
+.slide-fade-enter-active {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+  .slide-fade-leave-active {
+    -webkit-transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    -moz-transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    -ms-transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    -o-transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+
+  .slide-fade-enter,
+  .slide-fade-leave-to {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+
+    opacity: 0;
+  }
+</style>
