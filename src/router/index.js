@@ -50,6 +50,31 @@ export default new Router({
       path: '/demo8',
       name: 'demo8',
       component: () => import('@/components/demo8')
+    },
+    {
+      path: '/demo9',
+      name: 'demo9',
+      component: () => import('@/components/demo9')
+    },
+    {
+      path: '/demo10',
+      name: 'demo10',
+      component: () => import('@/components/demo10')
+    },
+    {
+      path: '/demo11',
+      name: 'demo11',
+      component: () => import('@/components/demo11')
+    },
+    {
+      path: '/demo12',
+      name: 'demo12',
+      component: () => import('@/components/demo12')
+    },
+    {
+      path: '/demo13',
+      name: 'demo13',
+      component: () => import('@/components/demo13')
     }
   ]
 })
